@@ -20,10 +20,8 @@
 <!-- About widget -->
 <div class="row">
   <div class="col-12 col-lg-4">
-    <blockquote>
-      <p>{{ $page.Params.quote | markdownify }}</p>
-      <span class="cite">- {{ $page.Params.quote_source }}</span>
-    </blockquote>
+    {{ $page.Params.quote | markdownify }}
+    - {{ $page.Params.quote_source }}
     <div id="profile">
 
       {{ if site.Params.features.avatar.gravatar }}
