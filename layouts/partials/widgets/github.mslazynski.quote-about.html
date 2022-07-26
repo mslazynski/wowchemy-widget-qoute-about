@@ -24,7 +24,7 @@
       
       <div class="headerquote">
           <p>{{ $page.Params.quote | markdownify }}</p>
-          <a href="{{ $page.Params.quote_link }}" target="_blank" rel="noopener"><span class="cite">&mdash;&mdash; {{ $page.Params.quote_source }}</span></a>
+          <span class="cite">&mdash; <a href="{{ $page.Params.quote_link }}" target="_blank" rel="noopener">{{ $page.Params.quote_source }}</a></span>
       </div>
        
     </div>
