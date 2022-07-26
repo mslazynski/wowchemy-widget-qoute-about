@@ -76,8 +76,8 @@
     <div class="row">
 
       <div class="col-md-5">
-        <div class="section-subheading">{{ i18n "social" | markdownify }}</div>
-        <ul class="ul-interests mb-0">
+        <div class="section-subheading">{{ i18n "related" | markdownify }}</div>
+        <ul class="ul-social mb-0">
           {{ range $person.social }}
           {{ $pack := or .icon_pack "fas" }}
           {{ $pack_prefix := $pack }}
@@ -95,6 +95,7 @@
           <li>
             <a href="{{ $link | safeURL }}" {{ $target | safeHTMLAttr }} aria-label="{{ .icon }}">
               <i class="{{ $pack }} {{ $pack_prefix }}-{{ .icon }}"></i>
+              {{ .name | markdownify | emojify }}
             </a>
           </li>
           {{ end }}
