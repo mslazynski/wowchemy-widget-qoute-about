@@ -95,7 +95,10 @@
           <li>
             <a href="{{ $link | safeURL }}" {{ $target | safeHTMLAttr }} aria-label="{{ .icon }}">
               <i class="{{ $pack }} {{ $pack_prefix }}-{{ .icon }}"></i>
-              {{ .name | markdownify | emojify }}
+              <div class="description">
+                <p>{{ .name | markdownify | emojify }}</p>
+              </div>
+              
             </a>
           </li>
           {{ end }}
