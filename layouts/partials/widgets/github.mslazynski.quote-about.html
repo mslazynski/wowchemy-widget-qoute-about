@@ -23,7 +23,7 @@
     <div class="d-flex justify-content-center">
       <div class="headerquote">
           <p>{{ $page.Params.quote | markdownify }}</p>
-          <span class="cite">&mdash; {{ $page.Params.quote_source }}</span>
+          <span class="cite">&mdash; {{ $page.Params.quote_source | markdownify }}</span>
       </div>
     </div>
   </div>
