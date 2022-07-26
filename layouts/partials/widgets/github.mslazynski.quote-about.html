@@ -20,9 +20,11 @@
 <!-- About widget -->
 <div class="row">
   <div class="col-12">
-    <div class="headerquote">
-        <p>{{ $page.Params.quote | markdownify }}</p>
-        <span class="cite">&mdash; {{ $page.Params.quote_source }}</span>
+    <div class="col-auto text-center flex-column d-none d-sm-flex">
+      <div class="headerquote">
+          <p>{{ $page.Params.quote | markdownify }}</p>
+          <span class="cite">&mdash; {{ $page.Params.quote_source }}</span>
+      </div>
     </div>
   </div>
   <div class="col-12 col-lg-4">
