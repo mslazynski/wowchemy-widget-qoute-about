@@ -77,7 +77,7 @@
 
       <div class="col-md-5">
         <div class="section-subheading">{{ i18n "related" | markdownify }}</div>
-        <ul class="ul-social mb-0">
+        <ul class="ul-social fa-ul mb-0">
           {{ range $person.social }}
           {{ $pack := or .icon_pack "fas" }}
           {{ $pack_prefix := $pack }}
@@ -94,11 +94,10 @@
           {{ end }}
           <li>
             <a href="{{ $link | safeURL }}" {{ $target | safeHTMLAttr }} aria-label="{{ .icon }}">
-              <i class="{{ $pack }} {{ $pack_prefix }}-{{ .icon }}"></i>
+              <i class="fa-li {{ $pack }} {{ $pack_prefix }}-{{ .icon }}"></i>
               <div class="description">
                 <p>{{ .name | markdownify | emojify }}</p>
-              </div>
-              
+              </div>   
             </a>
           </li>
           {{ end }}
